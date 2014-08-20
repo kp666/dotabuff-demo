@@ -38,7 +38,7 @@ gem 'spring', group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'omniauth-steam'
-
+gem 'foundation-rails'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
