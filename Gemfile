@@ -43,6 +43,7 @@ group :development do
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'mysql2'
+  gem 'pry'
 
 end
 group :production do

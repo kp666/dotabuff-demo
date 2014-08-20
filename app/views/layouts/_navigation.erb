@@ -1,15 +1,26 @@
 <nav class="top-bar" data-topbar>
   <section class="top-bar-section">
     <ul class="right">
+      <% if user_signed_in? %>
+          <% if session.key? :current_user %>
+              <li >
+               <a href="#">Welcome <%= session[:current_user][:nickname] %> </a>
+              </li>
+              <li>
+                <%= link_to image_tag(session[:current_user][:image]),user_path(current_user)  %>
+              </li>
+          <% end %>
+      <% end %>
       <li>
         <% if user_signed_in? %>
-          <li><%= link_to 'Sign out', signout_path %></li>
+          <li><%= link_to 'Sign Out', signout_path %></li>
       <% else %>
           <%= link_to '/auth/steam' do %>
               <%= image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_small.png", class: 'steam_sign_in', alt: 'Sign In') %>
           <% end %>
       <% end %>
       </li>
+
     </ul>
   </section>
 </nav>
