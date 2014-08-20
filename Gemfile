@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,6 +42,12 @@ gem 'omniauth-steam'
 group :development do
   gem 'better_errors'
   gem 'quiet_assets'
+  gem 'mysql2'
+
+end
+group :production do
+  #gem 'pg'
+
 end
 group :development, :test do
   gem 'factory_girl_rails'
@@ -53,5 +58,6 @@ group :test do
   gem 'database_cleaner'
   gem 'faker'
   gem 'launchy'
+  gem 'sqlite3'
 end
 
