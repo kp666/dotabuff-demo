@@ -24,9 +24,9 @@ module Omniauth
   module SessionHelpers
     def signin
       visit root_path
-      expect(page).to have_link("Sign in")
+      expect(page).to have_link("Sign In")
       auth_mock
-      click_link "Sign in"
+      click_link("Sign In")
     end
   end
 
