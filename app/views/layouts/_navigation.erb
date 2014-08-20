@@ -1,0 +1,15 @@
+<nav class="top-bar" data-topbar>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li>
+        <% if user_signed_in? %>
+          <li><%= link_to 'Sign out', signout_path %></li>
+      <% else %>
+          <%= link_to '/auth/steam' do %>
+              <%= image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_small.png", class: 'steam_sign_in', alt: 'Sign In') %>
+          <% end %>
+      <% end %>
+      </li>
+    </ul>
+  </section>
+</nav>
