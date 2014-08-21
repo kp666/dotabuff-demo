@@ -63,7 +63,7 @@ group :test do
   gem 'launchy'
   gem 'sqlite3'
 end
-gem 'dota' ,:git=> "git@github.com:nashby/dota.git"
+gem 'dota' ,:git=> "git://github.com/nashby/dota.git"
 gem 'chronic_duration'
 gem 'will_paginate'
 
