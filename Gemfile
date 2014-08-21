@@ -43,7 +43,6 @@ group :development do
   gem 'better_errors'
   gem 'quiet_assets'
   gem 'mysql2'
-  gem 'pry'
 
 end
 group :production do
@@ -53,6 +52,8 @@ end
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'pry'
+
 end
 group :test do
   gem 'capybara'
