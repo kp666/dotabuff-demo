@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:nashby/dota.git
+  remote: git://github.com/nashby/dota.git
   revision: 8520aa02967ed95bf4ab55d96c1f2cb001bbfef1
   specs:
     dota (0.0.1)
