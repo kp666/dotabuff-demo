@@ -1,0 +1,47 @@
+<table id="radiant" class="display">
+  <thead>
+  <tr>
+    <th>Hero</th>
+    <th>Player</th>
+    <th>Level</th>
+    <th>Kills</th>
+    <th>Deaths</th>
+    <th>Assists</th>
+    <th>Gold</th>
+    <th>Last Hits</th>
+    <th>Denies</th>
+    <th>XPM</th>
+    <th>GPM</th>
+    <th>HeroDamage</th>
+    <th>HeroHealing</th>
+    <th>TowerDamage</th>
+    <th>Items</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @players[team.to_sym].each do |player| %>
+      <tr>
+        <th><%= hero_name(player[:hero_id]) %></th>
+        <th><%= player[:name] %></th>
+        <th><%= player[:level] %></th>
+        <th><%= player[:kills] %></th>
+        <th><%= player[:deaths] %></th>
+        <th><%= player[:assists] %></th>
+        <th><%= player[:gold] %></th>
+        <th><%= player[:last_hits] %></th>
+        <th><%= player[:denies] %></th>
+        <th><%= player[:xp_per_min] %></th>
+        <th><%= player[:gold_per_min] %></th>
+        <th><%= player[:hero_damage] %></th>
+        <th><%= player[:hero_healing] %></th>
+        <th><%= player[:tower_damage] %></th>
+        <th>
+          <% player[:items].each do |item| %>
+              <%= image_tag(img_url_from_steam(item,"items")) unless item == 'emptyitembg' %>
+          <% end %>
+        </th>
+      </tr>
+  <% end %>
+  </tbody>
+
+</table>

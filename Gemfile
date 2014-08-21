@@ -63,4 +63,7 @@ group :test do
 end
 gem 'dota' ,:path => "./../dota"
 gem 'chronic_duration'
+gem 'will_paginate'
+
+
 

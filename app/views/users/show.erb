@@ -14,7 +14,7 @@
   </tr>
   </thead>
   <tbody>
-  <% @matches.each do |match| %>
+  <% @match_details.each do |match| %>
       <tr>
         <td><%=
           link_to(match.id , match_path(match.id))%>
@@ -40,3 +40,4 @@
 
 </table>
 
+<%= will_paginate @pages ,:params => { :first_match_id => @first_match_id }%>

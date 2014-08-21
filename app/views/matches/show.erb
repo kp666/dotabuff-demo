@@ -1,0 +1,6 @@
+<h2 class="text-center"><%= @heading %></h2>
+<% ["radiant", "dire"].each do |team| %>
+    <h3>The <%= team.humanize %></h3>
+    <%= render :partial => 'match_stats', locals: {team: team} %>
+<% end %>
+

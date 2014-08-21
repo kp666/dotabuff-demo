@@ -8,8 +8,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @matchlist = []
     if session.key? :current_user
-      @matches = Dota.history(:account_id => @user.uid,:matches_requested => 5).matches.collect{|m|Dota.match(m.id)}
+      history = Dota.history(:account_id => @user.uid,:start_at_match_id => params[:first_match_id])
+      matches = history.matches
+      @first_match_id = matches.first.id
     end
+    @pages = matches.paginate(:per_page => 5,:page => params[:page])
+    @match_details  = @pages.collect{|m|Dota.match(m.id)}
   end
 
 end
