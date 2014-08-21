@@ -61,4 +61,6 @@ group :test do
   gem 'launchy'
   gem 'sqlite3'
 end
+gem 'dota' ,:path => "./../dota"
+gem 'chronic_duration'
 

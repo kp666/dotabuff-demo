@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/auth/failure' => 'sessions#failure'
   root to: 'home#index'
   resources :users
+  resources :matches
+
 end

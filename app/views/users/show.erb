@@ -1,3 +1,42 @@
-<h3>User</h3>
-<p>Name: <%= @user.name if @user.name %></p>
-<p>Name: <%= @user.name if @user.name %></p>
+<h3><%= @heading%></h3>
+<table id="matches" class="display">
+  <thead>
+  <tr>
+    <th>Match Id</th>
+    <th>Winner</th>
+    <th>Match Type</th>
+    <th>Mode</th>
+    <th>Duration</th>
+    <th>First Blood Time </th>
+    <th>Time </th>
+    <th>Replay</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <% @matches.each do |match| %>
+      <tr>
+        <td><%=
+          link_to(match.id , match_path(match.id))%>
+        </td>
+        <td>
+          <%= match.winner %>
+        </td>
+        <td><%= match.lobby %></td>
+        <td><%= match.mode %></td>
+        <td><%= ChronicDuration.output(match.duration) %></td>
+        <td><%= match.first_blood %></td>
+        <td>
+          <%= time_ago_in_words(match.start) %>
+        </td>
+        <td>
+          <%= link_to("Watch Replay", "dota2://matchid=#{match.id}") %>
+        </td>
+
+      </tr>
+
+  <% end %>
+  </tbody>
+
+</table>
+

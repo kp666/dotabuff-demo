@@ -3,8 +3,12 @@
     <ul class="right">
       <% if user_signed_in? %>
           <% if session.key? :current_user %>
+
               <li >
                <a href="#">Welcome <%= session[:current_user][:nickname] %> </a>
+              </li>
+              <li >
+                <a href="/">Home</a>
               </li>
               <li>
                 <%= link_to image_tag(session[:current_user][:image]),user_path(current_user)  %>

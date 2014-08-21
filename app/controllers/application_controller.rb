@@ -32,4 +32,8 @@ class ApplicationController < ActionController::Base
       redirect_to root_url, :alert => 'You need to sign in for access to this page.'
     end
   end
+
+  def steam_api_key
+    @steam_api_key ||= Rails.application.secrets[:steam_api_key]
+  end
 end

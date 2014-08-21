@@ -1,3 +1,10 @@
+PATH
+  remote: ./../dota
+  specs:
+    dota (0.0.1)
+      faraday (~> 0.8.4)
+      faraday_middleware (~> 0.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -40,6 +47,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    chronic_duration (0.10.5)
+      numerizer (~> 0.1.1)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -59,6 +68,10 @@ GEM
       railties (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
+    faraday (0.8.9)
+      multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.1)
+      faraday (>= 0.7.4, < 0.10)
     foundation-rails (5.3.3.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
@@ -82,9 +95,11 @@ GEM
     mini_portile (0.6.0)
     minitest (5.4.0)
     multi_json (1.10.1)
+    multipart-post (1.2.0)
     mysql2 (0.3.16)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
+    numerizer (0.1.1)
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
@@ -185,8 +200,10 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   capybara
+  chronic_duration
   coffee-rails (~> 4.0.0)
   database_cleaner
+  dota!
   factory_girl_rails
   faker
   foundation-rails
