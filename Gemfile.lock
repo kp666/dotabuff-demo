@@ -1,10 +1,3 @@
-PATH
-  remote: ./../dota
-  specs:
-    dota (0.0.1)
-      faraday (~> 0.8.4)
-      faraday_middleware (~> 0.9.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -59,6 +52,9 @@ GEM
     coffee-script-source (1.7.1)
     database_cleaner (1.3.0)
     diff-lcs (1.2.5)
+    dota (0.0.1)
+      faraday (~> 0.8.4)
+      faraday_middleware (~> 0.9.0)
     erubis (2.7.0)
     execjs (2.2.1)
     factory_girl (4.4.0)
@@ -204,7 +200,7 @@ DEPENDENCIES
   chronic_duration
   coffee-rails (~> 4.0.0)
   database_cleaner
-  dota!
+  dota
   factory_girl_rails
   faker
   foundation-rails
