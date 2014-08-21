@@ -46,7 +46,8 @@ group :development do
 
 end
 group :production do
-  #gem 'pg'
+  gem 'pg'
+  gem 'rails_12factor'
 
 end
 group :development, :test do
@@ -62,7 +63,7 @@ group :test do
   gem 'launchy'
   gem 'sqlite3'
 end
-gem 'dota' 
+gem 'dota' ,:git=> "git@github.com:nashby/dota.git"
 gem 'chronic_duration'
 gem 'will_paginate'
 
