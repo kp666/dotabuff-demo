@@ -1,1 +1,2 @@
 An experimental app like dotabuff but uses steam api to get user data.
+demo is hosted at  http://dotademo.herokuapp.com/
