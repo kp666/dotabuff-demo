@@ -8,7 +8,7 @@
     <th>Mode</th>
     <th>Duration</th>
     <th>First Blood Time </th>
-    <th>Time </th>
+    <th>Start Time </th>
     <th>Replay</th>
 
   </tr>
@@ -25,9 +25,9 @@
         <td><%= match.lobby %></td>
         <td><%= match.mode %></td>
         <td><%= ChronicDuration.output(match.duration) %></td>
-        <td><%= match.first_blood %></td>
+        <td><%= ChronicDuration.output(match.first_blood) %></td>
         <td>
-          <%= time_ago_in_words(match.start) %>
+          <%= time_ago_in_words(match.start) %> ago
         </td>
         <td>
           <%= link_to("Watch Replay", "dota2://matchid=#{match.id}") %>
