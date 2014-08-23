@@ -1,6 +1,8 @@
-
 feature 'Sign in', :omniauth do
 
+before do
+
+end
   scenario "users can sign in with valid account" do
     signin
     expect(page).to have_content("Sign Out")

@@ -12,7 +12,8 @@ require 'rspec/rails'
 # end with _spec.rb. You can configure this pattern with the --pattern
 # option on the command line or in ~/.rspec, .rspec or `.rspec-local`.
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
-
+require 'webmock/rspec'
+WebMock.disable_net_connect!(allow_localhost: true)
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.maintain_test_schema!
@@ -42,5 +43,9 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.include Omniauth::Mock
   config.include Omniauth::SessionHelpers, type: :feature
+  config.before(:type => :feature) do
+    stub_match_history
+    stub_match_details
+  end
 end
 OmniAuth.config.test_mode = true

@@ -62,6 +62,7 @@ group :test do
   gem 'faker'
   gem 'launchy'
   gem 'sqlite3'
+  gem 'webmock'
 end
 gem 'dota' ,:git=> "git://github.com/nashby/dota.git"
 gem 'chronic_duration'
